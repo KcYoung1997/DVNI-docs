@@ -1,0 +1,356 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>utils.vlan &mdash; DVNI honours-prerelease documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> DVNI
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">DVNI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/start.html">Start Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../containers.html">Containers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.base.html">Base Continer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.dhcpd.html">ISC DHCP Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.kali.html">Kali Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.nginx.html">Nginx Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.vsftpd.html">Very Secure FTP Daemon</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../scenarios.html">Scenarios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.ArpPoisioning.html">ARP Poisoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.CAMFlooding.html">CAM Flooding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.DHCPIntro.html">DHCP Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.DHCPStarvation.html">DHCP Starvation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.HostScanning.html">Host Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.PacketSniffing.html">Packet Sniffing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.PortScanning.html">Port Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.VlanDoubleTagging.html">VLAN Double Tagging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.VlanTrunking.html">VLAN Trunking</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../utils.html">Utilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.account.html">Host Account Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.arp.html">Address Routing Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.document.html">Documenation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.network.html">Mininet Network Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.stp.html">Spanning Tree Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.subnet.html">Subnet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.vlan.html">Virtual LAN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../controller.html">Controller</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">DVNI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>utils.vlan</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for utils.vlan</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Virtual LAN</span>
+<span class="sd">=====================</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">enum</span> <span class="k">import</span> <span class="n">Enum</span>
+<span class="kn">from</span> <span class="nn">mininet.link</span> <span class="k">import</span> <span class="n">Intf</span>
+<span class="kn">from</span> <span class="nn">mininet.node</span> <span class="k">import</span> <span class="n">OVSSwitch</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span>
+
+
+<div class="viewcode-block" id="VlanMode"><a class="viewcode-back" href="../../api/utils.vlan.html#utils.vlan.VlanMode">[docs]</a><span class="k">class</span> <span class="nc">VlanMode</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Enum for the types of VLAN mode in Open vSwitch. See: http://www.openvswitch.org/support/dist-docs/ovs-vswitchd.conf.db.5.html</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ACCESS</span> <span class="o">=</span> <span class="s1">&#39;access&#39;</span>
+    <span class="n">TRUNK</span> <span class="o">=</span> <span class="s1">&#39;trunk&#39;</span>
+    <span class="n">TAGGED</span> <span class="o">=</span> <span class="s1">&#39;native-tagged&#39;</span>
+    <span class="n">UNTAGGED</span> <span class="o">=</span> <span class="s1">&#39;native-untagged&#39;</span>
+    <span class="n">TUNNEL</span> <span class="o">=</span> <span class="s1">&#39;dot1q-tunnel&#39;</span></div>
+
+
+<span class="n">vlans</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="sd">&quot;&quot;&quot;Stores unused VLANs in a random order for use with the utility functions.</span>
+<span class="sd">   Generated the first time a VLAN is requested. </span>
+<span class="sd">   Originally holds numbers from 1 to 0xFFE since 0 &amp; 0xFFF are reserved VLANs&quot;&quot;&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">_generate_vlans</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">vlans</span>
+    <span class="n">vlans</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mh">0xFFE</span><span class="p">)</span>
+    <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">vlans</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="random_vlan"><a class="viewcode-back" href="../../api/utils.vlan.html#utils.vlan.random_vlan">[docs]</a><span class="k">def</span> <span class="nf">random_vlan</span><span class="p">():</span>
+    <span class="c1"># type: () -&gt; int</span>
+    <span class="sd">&quot;&quot;&quot;Returns a random unused VLAN&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">vlans</span><span class="p">:</span>
+        <span class="n">_generate_vlans</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">vlans</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="random_vlans"><a class="viewcode-back" href="../../api/utils.vlan.html#utils.vlan.random_vlans">[docs]</a><span class="k">def</span> <span class="nf">random_vlans</span><span class="p">(</span><span class="n">count</span><span class="p">):</span>
+    <span class="c1"># type: (int) -&gt; List[int]</span>
+    <span class="sd">&quot;&quot;&quot;Returns &#39;count&#39; amount of random unused VLANs&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">vlans</span><span class="p">:</span>
+        <span class="n">_generate_vlans</span><span class="p">()</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">vlans</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">count</span><span class="p">)]</span></div>
+
+
+<span class="k">def</span> <span class="nf">_cmd_intf</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">intf</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Passes the given command to Virtual Switch control (ovs-vsctl), configures an OVSSwitch.</span>
+
+<span class="sd">    :param cmd: Command to pass to vsctl.</span>
+<span class="sd">            Contains one unformatted &#39;%s&#39; to be replaced with interface name</span>
+<span class="sd">    :param intf: The interface to run the command with</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">intf</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">vsctl</span><span class="p">(</span><span class="n">cmd</span> <span class="o">%</span> <span class="n">intf</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="tag_intf"><a class="viewcode-back" href="../../api/utils.vlan.html#utils.vlan.tag_intf">[docs]</a><span class="k">def</span> <span class="nf">tag_intf</span><span class="p">(</span><span class="n">intf</span><span class="p">,</span> <span class="n">tag</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Sets the VLAN tag of an OVSSwitch port.</span>
+
+<span class="sd">    :param intf: The interface to tag.</span>
+<span class="sd">    :param tag: The VLAN tag to add</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_cmd_intf</span><span class="p">(</span><span class="s1">&#39;set port </span><span class="si">%s</span><span class="s1"> tag=&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tag</span><span class="p">),</span> <span class="n">intf</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="trunk_intf"><a class="viewcode-back" href="../../api/utils.vlan.html#utils.vlan.trunk_intf">[docs]</a><span class="k">def</span> <span class="nf">trunk_intf</span><span class="p">(</span><span class="n">intf</span><span class="p">,</span> <span class="n">trunks</span><span class="p">):</span>
+    <span class="c1"># type: (Intf, List[int]) -&gt; None</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Adds the VLAN trunks to an OVSSwitch port.</span>
+
+<span class="sd">    :param intf: The interface to add trunks to.</span>
+<span class="sd">    :param trunks: List of trunks to add.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_cmd_intf</span><span class="p">(</span><span class="s1">&#39;set port </span><span class="si">%s</span><span class="s1"> trunks=&#39;</span> <span class="o">+</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">trunks</span><span class="p">),</span> <span class="n">intf</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="vlan_mode_intf"><a class="viewcode-back" href="../../api/utils.vlan.html#utils.vlan.vlan_mode_intf">[docs]</a><span class="k">def</span> <span class="nf">vlan_mode_intf</span><span class="p">(</span><span class="n">intf</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">VlanMode</span><span class="o">.</span><span class="n">UNTAGGED</span><span class="p">):</span>
+    <span class="c1"># type: (Intf, VlanMode) -&gt; None</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Sets the VLAN mode of an OVSSwitch port.</span>
+
+<span class="sd">    :param intf: The interface to set VLAN mode on.</span>
+<span class="sd">    :param mode: The mode to set.</span>
+<span class="sd">    :return:</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_cmd_intf</span><span class="p">(</span><span class="s1">&#39;set port </span><span class="si">%s</span><span class="s1"> vlan_mode=&#39;</span> <span class="o">+</span> <span class="n">mode</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">intf</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="VlanSwitch"><a class="viewcode-back" href="../../api/utils.vlan.html#utils.vlan.VlanSwitch">[docs]</a><span class="k">class</span> <span class="nc">VlanSwitch</span><span class="p">(</span><span class="n">OVSSwitch</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds extension functions to OVSSwitch for the management of VLAN settings.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">VlanSwitch</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trunks</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tags</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">modes</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+<div class="viewcode-block" id="VlanSwitch.addTrunk"><a class="viewcode-back" href="../../api/utils.vlan.html#utils.vlan.VlanSwitch.addTrunk">[docs]</a>    <span class="k">def</span> <span class="nf">addTrunk</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">intf</span><span class="p">,</span> <span class="o">*</span><span class="n">trunks</span><span class="p">):</span>
+        <span class="c1"># type: (Intf, List[int]) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Adds VLAN trunks to an interface.&quot;&quot;&quot;</span>
+        <span class="c1"># Append trunks if some already exist</span>
+        <span class="k">if</span> <span class="n">intf</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">trunks</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">trunks</span><span class="p">[</span><span class="n">intf</span><span class="p">]</span> <span class="o">+=</span> <span class="n">trunks</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">trunks</span><span class="p">[</span><span class="n">intf</span><span class="p">]</span> <span class="o">=</span> <span class="n">trunks</span></div>
+
+<div class="viewcode-block" id="VlanSwitch.addTag"><a class="viewcode-back" href="../../api/utils.vlan.html#utils.vlan.VlanSwitch.addTag">[docs]</a>    <span class="k">def</span> <span class="nf">addTag</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">intf</span><span class="p">,</span> <span class="n">tag</span><span class="p">):</span>
+        <span class="c1"># type: (Intf, int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets VLAN tag of an interface.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="p">[</span><span class="n">intf</span><span class="p">]</span> <span class="o">=</span> <span class="n">tag</span></div>
+
+<div class="viewcode-block" id="VlanSwitch.addMode"><a class="viewcode-back" href="../../api/utils.vlan.html#utils.vlan.VlanSwitch.addMode">[docs]</a>    <span class="k">def</span> <span class="nf">addMode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">intf</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">VlanMode</span><span class="o">.</span><span class="n">UNTAGGED</span><span class="p">):</span>
+        <span class="c1"># type: (Intf, VlanMode) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets VLAN mode of an interface.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">modes</span><span class="p">[</span><span class="n">intf</span><span class="p">]</span> <span class="o">=</span> <span class="n">mode</span></div>
+
+<div class="viewcode-block" id="VlanSwitch.start"><a class="viewcode-back" href="../../api/utils.vlan.html#utils.vlan.VlanSwitch.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">controllers</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Extends OVSSwitch function. Sets VLAN settings at start-time.&quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">VlanSwitch</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">controllers</span><span class="p">)</span>
+        <span class="c1"># Add VLAN trunks to OVSSwitch ports</span>
+        <span class="p">[</span><span class="n">trunk_intf</span><span class="p">(</span><span class="n">intf</span><span class="p">,</span> <span class="n">trunks</span><span class="p">)</span> <span class="k">for</span> <span class="n">intf</span><span class="p">,</span> <span class="n">trunks</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">trunks</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+        <span class="c1"># Add VLAN tag to OVSSwitch ports</span>
+        <span class="p">[</span><span class="n">tag_intf</span><span class="p">(</span><span class="n">intf</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span> <span class="k">for</span> <span class="n">intf</span><span class="p">,</span> <span class="n">tag</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+        <span class="c1"># Sets the VLAN mode for OVSSwitch ports</span>
+        <span class="p">[</span><span class="n">vlan_mode_intf</span><span class="p">(</span><span class="n">intf</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span> <span class="k">for</span> <span class="n">intf</span><span class="p">,</span> <span class="n">mode</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">modes</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Keiran Young
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

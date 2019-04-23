@@ -1,0 +1,301 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>container &mdash; DVNI honours-prerelease documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DVNI
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">DVNI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/start.html">Start Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../containers.html">Containers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/container.base.html">Base Continer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/container.dhcpd.html">ISC DHCP Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/container.kali.html">Kali Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/container.nginx.html">Nginx Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/container.vsftpd.html">Very Secure FTP Daemon</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../scenarios.html">Scenarios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/scenarios.ArpPoisioning.html">ARP Poisoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/scenarios.CAMFlooding.html">CAM Flooding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/scenarios.DHCPIntro.html">DHCP Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/scenarios.DHCPStarvation.html">DHCP Starvation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/scenarios.HostScanning.html">Host Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/scenarios.PacketSniffing.html">Packet Sniffing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/scenarios.PortScanning.html">Port Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/scenarios.VlanDoubleTagging.html">VLAN Double Tagging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/scenarios.VlanTrunking.html">VLAN Trunking</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../utils.html">Utilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/utils.account.html">Host Account Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/utils.arp.html">Address Routing Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/utils.document.html">Documenation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/utils.network.html">Mininet Network Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/utils.stp.html">Spanning Tree Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/utils.subnet.html">Subnet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/utils.vlan.html">Virtual LAN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../controller.html">Controller</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DVNI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Module code</a> &raquo;</li>
+        
+      <li>container</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for container</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Docker Containers</span>
+<span class="sd">=================</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">docker</span>
+<span class="kn">from</span> <span class="nn">mininet.log</span> <span class="k">import</span> <span class="n">info</span><span class="p">,</span> <span class="n">debug</span>
+<span class="kn">from</span> <span class="nn">mininet</span> <span class="k">import</span> <span class="n">node</span>
+
+
+<div class="viewcode-block" id="Docker"><a class="viewcode-back" href="../containers.html#container.Docker">[docs]</a><span class="k">class</span> <span class="nc">Docker</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">Docker</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Wrapper to mininet.node.Docker that automates building containers. Should be used as the base class for any other docker containers.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">docker</span><span class="o">.</span><span class="n">from_env</span><span class="p">()</span>
+    <span class="n">built</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">added</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">dimage</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="s1">&#39;dvni/base&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base_image</span> <span class="o">=</span> <span class="n">base</span>
+        <span class="c1"># Prepend image names with our repo name</span>
+        <span class="n">dimage</span> <span class="o">=</span> <span class="s1">&#39;dvni/&#39;</span> <span class="o">+</span> <span class="n">dimage</span>
+        <span class="c1"># Build the needed image if it doesn&#39;t exist</span>
+        <span class="k">if</span> <span class="n">dimage</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">Docker</span><span class="o">.</span><span class="n">built</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">dimage</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Docker</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">dimage</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">Docker</span><span class="o">.</span><span class="n">added</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Docker.document"><a class="viewcode-back" href="../containers.html#container.Docker.document">[docs]</a>    <span class="k">def</span> <span class="nf">document</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">doc</span><span class="p">):</span>
+        <span class="c1"># Derived classes should implement this to write documentation about themselves</span>
+        <span class="c1"># By default prints interfaces if they exist</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">intfs</span><span class="p">:</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">add_paragraph</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">intf</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">intfs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">add_run</span><span class="p">(</span><span class="s1">&#39;Interface: </span><span class="se">\t</span><span class="si">%s</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">intf</span><span class="o">.</span><span class="n">name</span><span class="p">))</span><span class="o">.</span><span class="n">bold</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">add_run</span><span class="p">(</span><span class="s1">&#39;IP Address: </span><span class="se">\t</span><span class="si">%s</span><span class="s1">/</span><span class="si">%s</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">intf</span><span class="o">.</span><span class="n">ip</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">intf</span><span class="o">.</span><span class="n">prefixLen</span><span class="p">)))</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">add_run</span><span class="p">(</span><span class="s1">&#39;MAC: </span><span class="se">\t\t</span><span class="si">%s</span><span class="se">\n\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">intf</span><span class="o">.</span><span class="n">mac</span><span class="p">))</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="Docker.build"><a class="viewcode-back" href="../containers.html#container.Docker.build">[docs]</a>    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Build dockerfile from the container/ directory</span>
+
+<span class="sd">            Example:</span>
+<span class="sd">                &gt;&gt;&gt; self.build(&quot;kali&quot;)</span>
+<span class="sd">                (&lt;Image: &#39;dvni/kali:latest&#39;&gt;, &lt;itertools.tee object at 0x7f8c1d698098&gt;)</span>
+
+<span class="sd">            Args:</span>
+<span class="sd">                name (str): The directory within container/ containing the Dockerfilr</span>
+
+<span class="sd">            Returns:</span>
+<span class="sd">                (:py:class:`Image`): The built image.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_image</span><span class="p">:</span>
+            <span class="c1"># if base image isn&#39;t built</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">Docker</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">images</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">base_image</span><span class="p">):</span>
+                <span class="c1"># Build base image</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_image</span><span class="p">)</span>
+
+        <span class="n">info</span><span class="p">(</span><span class="s1">&#39;*** Building &#39;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s1">&#39; docker container</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="c1"># If path to Dockerfile doesn&#39;t exist</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">[</span><span class="mi">5</span><span class="p">:]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+            <span class="c1"># Raise exception with path for clarity</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Container does not exist: path = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">path</span><span class="p">)</span>
+
+        <span class="n">image</span> <span class="o">=</span> <span class="n">Docker</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">images</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span>
+                                           <span class="n">rm</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">tags</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">image</span><span class="o">.</span><span class="n">tag</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="c1"># If the log level is debug, print the build log</span>
+        <span class="c1">#for line in logs:</span>
+        <span class="c1">#    debug(line)</span>
+        <span class="c1"># Add this image to the built list</span>
+        <span class="n">Docker</span><span class="o">.</span><span class="n">built</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">name</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Keiran Young
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

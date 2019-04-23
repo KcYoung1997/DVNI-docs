@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DVNI &mdash; DVNI honours-prerelease documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Start Function" href="api/start.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> DVNI
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">DVNI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/start.html">Start Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="containers.html">Containers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/container.base.html">Base Continer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/container.dhcpd.html">ISC DHCP Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/container.kali.html">Kali Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/container.nginx.html">Nginx Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/container.vsftpd.html">Very Secure FTP Daemon</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scenarios.html">Scenarios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/scenarios.ArpPoisioning.html">ARP Poisoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/scenarios.CAMFlooding.html">CAM Flooding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/scenarios.DHCPIntro.html">DHCP Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/scenarios.DHCPStarvation.html">DHCP Starvation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/scenarios.HostScanning.html">Host Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/scenarios.PacketSniffing.html">Packet Sniffing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/scenarios.PortScanning.html">Port Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/scenarios.VlanDoubleTagging.html">VLAN Double Tagging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/scenarios.VlanTrunking.html">VLAN Trunking</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/utils.account.html">Host Account Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/utils.arp.html">Address Routing Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/utils.document.html">Documenation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/utils.network.html">Mininet Network Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/utils.stp.html">Spanning Tree Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/utils.subnet.html">Subnet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/utils.vlan.html">Virtual LAN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html">Controller</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">DVNI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>DVNI</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dvni">
+<h1>DVNI<a class="headerlink" href="#dvni" title="Permalink to this headline">¶</a></h1>
+<p>Damn Vulnerable Network Infrastructure (DVNI) is a project based on Containernet that creates vulnerable Software Defined Networks (SDN) to allow users to practice Ethical Hacking techniques against Layer 2/3 network services.</p>
+</div>
+<div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.vagrantup.com/downloads.html">Vagrant</a> - The project runs within a virtual machine (VM), vagrant is used to download and configure this.</p>
+<p><a class="reference external" href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> - The project is run inside a VirtualBox VM.</p>
+<p><em>FTP Client</em> - Task &amp; answer sheets are provided over FTP.</p>
+<p><em>VNC Viewer OR a Web Browser</em> - Most tasks supply a Kali machine that is connected to through either VNC or NoVNC in a web browser.</p>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Once you have installed the required utilitiles start the project with Vagrant (First time setup may take some time):</p>
+<p><code class="docutils literal notranslate"><span class="pre">vagrant</span> <span class="pre">up</span></code></p>
+<p>After this has completed you are free to try out the scenarios!</p>
+<p>You can connect to the project either using <cite>VirtualBox</cite> to view the VM or through SSH.</p>
+<p>Connect to the device through SSH with the credentials <cite>student</cite>:<cite>student</cite> or <cite>teacher</cite>:<cite>teacher</cite> and follow the guidance from there:</p>
+<p><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">student&#64;10.10.0.1</span></code></p>
+<div class="toctree-wrapper compound">
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">DVNI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/start.html">Start Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="containers.html">Containers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/container.base.html">Base Continer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/container.dhcpd.html">ISC DHCP Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/container.kali.html">Kali Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/container.nginx.html">Nginx Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/container.vsftpd.html">Very Secure FTP Daemon</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scenarios.html">Scenarios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/scenarios.ArpPoisioning.html">ARP Poisoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/scenarios.CAMFlooding.html">CAM Flooding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/scenarios.DHCPIntro.html">DHCP Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/scenarios.DHCPStarvation.html">DHCP Starvation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/scenarios.HostScanning.html">Host Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/scenarios.PacketSniffing.html">Packet Sniffing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/scenarios.PortScanning.html">Port Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/scenarios.VlanDoubleTagging.html">VLAN Double Tagging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/scenarios.VlanTrunking.html">VLAN Trunking</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/utils.account.html">Host Account Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/utils.arp.html">Address Routing Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/utils.document.html">Documenation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/utils.network.html">Mininet Network Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/utils.stp.html">Spanning Tree Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/utils.subnet.html">Subnet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/utils.vlan.html">Virtual LAN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html">Controller</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api/start.html" class="btn btn-neutral float-right" title="Start Function" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Keiran Young
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

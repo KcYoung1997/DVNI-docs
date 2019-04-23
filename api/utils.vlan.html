@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Virtual LAN &mdash; DVNI honours-prerelease documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Controller" href="../controller.html" />
+    <link rel="prev" title="Subnet" href="utils.subnet.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DVNI
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">DVNI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="start.html">Start Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../containers.html">Containers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="container.base.html">Base Continer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container.dhcpd.html">ISC DHCP Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container.kali.html">Kali Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container.nginx.html">Nginx Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container.vsftpd.html">Very Secure FTP Daemon</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../scenarios.html">Scenarios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scenarios.ArpPoisioning.html">ARP Poisoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenarios.CAMFlooding.html">CAM Flooding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenarios.DHCPIntro.html">DHCP Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenarios.DHCPStarvation.html">DHCP Starvation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenarios.HostScanning.html">Host Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenarios.PacketSniffing.html">Packet Sniffing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenarios.PortScanning.html">Port Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenarios.VlanDoubleTagging.html">VLAN Double Tagging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenarios.VlanTrunking.html">VLAN Trunking</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../utils.html">Utilities</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="utils.account.html">Host Account Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.arp.html">Address Routing Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.document.html">Documenation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.network.html">Mininet Network Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.stp.html">Spanning Tree Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.subnet.html">Subnet</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Virtual LAN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../controller.html">Controller</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DVNI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../utils.html">Utilities</a> &raquo;</li>
+        
+      <li>Virtual LAN</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/utils.vlan.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="module-utils.vlan"></span><div class="section" id="virtual-lan">
+<h1>Virtual LAN<a class="headerlink" href="#virtual-lan" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="utils.vlan.VlanMode">
+<em class="property">class </em><code class="descclassname">utils.vlan.</code><code class="descname">VlanMode</code><a class="reference internal" href="../_modules/utils/vlan.html#VlanMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.vlan.VlanMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Enum for the types of VLAN mode in Open vSwitch. See: <a class="reference external" href="http://www.openvswitch.org/support/dist-docs/ovs-vswitchd.conf.db.5.html">http://www.openvswitch.org/support/dist-docs/ovs-vswitchd.conf.db.5.html</a></p>
+<dl class="attribute">
+<dt id="utils.vlan.VlanMode.ACCESS">
+<code class="descname">ACCESS</code><em class="property"> = 'access'</em><a class="headerlink" href="#utils.vlan.VlanMode.ACCESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="utils.vlan.VlanMode.TAGGED">
+<code class="descname">TAGGED</code><em class="property"> = 'native-tagged'</em><a class="headerlink" href="#utils.vlan.VlanMode.TAGGED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="utils.vlan.VlanMode.TRUNK">
+<code class="descname">TRUNK</code><em class="property"> = 'trunk'</em><a class="headerlink" href="#utils.vlan.VlanMode.TRUNK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="utils.vlan.VlanMode.TUNNEL">
+<code class="descname">TUNNEL</code><em class="property"> = 'dot1q-tunnel'</em><a class="headerlink" href="#utils.vlan.VlanMode.TUNNEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="utils.vlan.VlanMode.UNTAGGED">
+<code class="descname">UNTAGGED</code><em class="property"> = 'native-untagged'</em><a class="headerlink" href="#utils.vlan.VlanMode.UNTAGGED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="utils.vlan.VlanSwitch">
+<em class="property">class </em><code class="descclassname">utils.vlan.</code><code class="descname">VlanSwitch</code><span class="sig-paren">(</span><em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/utils/vlan.html#VlanSwitch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.vlan.VlanSwitch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">mininet.node.OVSSwitch</span></code></p>
+<p>Adds extension functions to OVSSwitch for the management of VLAN settings.</p>
+<dl class="method">
+<dt id="utils.vlan.VlanSwitch.addMode">
+<code class="descname">addMode</code><span class="sig-paren">(</span><em>intf</em>, <em>mode=&lt;VlanMode.UNTAGGED: 'native-untagged'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/utils/vlan.html#VlanSwitch.addMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.vlan.VlanSwitch.addMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets VLAN mode of an interface.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="utils.vlan.VlanSwitch.addTag">
+<code class="descname">addTag</code><span class="sig-paren">(</span><em>intf</em>, <em>tag</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/utils/vlan.html#VlanSwitch.addTag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.vlan.VlanSwitch.addTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets VLAN tag of an interface.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="utils.vlan.VlanSwitch.addTrunk">
+<code class="descname">addTrunk</code><span class="sig-paren">(</span><em>intf</em>, <em>*trunks</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/utils/vlan.html#VlanSwitch.addTrunk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.vlan.VlanSwitch.addTrunk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds VLAN trunks to an interface.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="utils.vlan.VlanSwitch.start">
+<code class="descname">start</code><span class="sig-paren">(</span><em>controllers</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/utils/vlan.html#VlanSwitch.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.vlan.VlanSwitch.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extends OVSSwitch function. Sets VLAN settings at start-time.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.vlan.random_vlan">
+<code class="descclassname">utils.vlan.</code><code class="descname">random_vlan</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/utils/vlan.html#random_vlan"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.vlan.random_vlan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a random unused VLAN</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.vlan.random_vlans">
+<code class="descclassname">utils.vlan.</code><code class="descname">random_vlans</code><span class="sig-paren">(</span><em>count</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/utils/vlan.html#random_vlans"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.vlan.random_vlans" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns ‘count’ amount of random unused VLANs</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.vlan.tag_intf">
+<code class="descclassname">utils.vlan.</code><code class="descname">tag_intf</code><span class="sig-paren">(</span><em>intf</em>, <em>tag</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/utils/vlan.html#tag_intf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.vlan.tag_intf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the VLAN tag of an OVSSwitch port.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>intf</strong> – The interface to tag.</li>
+<li><strong>tag</strong> – The VLAN tag to add</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.vlan.trunk_intf">
+<code class="descclassname">utils.vlan.</code><code class="descname">trunk_intf</code><span class="sig-paren">(</span><em>intf</em>, <em>trunks</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/utils/vlan.html#trunk_intf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.vlan.trunk_intf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the VLAN trunks to an OVSSwitch port.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>intf</strong> – The interface to add trunks to.</li>
+<li><strong>trunks</strong> – List of trunks to add.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.vlan.vlan_mode_intf">
+<code class="descclassname">utils.vlan.</code><code class="descname">vlan_mode_intf</code><span class="sig-paren">(</span><em>intf</em>, <em>mode=&lt;VlanMode.UNTAGGED: 'native-untagged'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/utils/vlan.html#vlan_mode_intf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.vlan.vlan_mode_intf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the VLAN mode of an OVSSwitch port.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>intf</strong> – The interface to set VLAN mode on.</li>
+<li><strong>mode</strong> – The mode to set.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="utils.vlan.vlans">
+<code class="descclassname">utils.vlan.</code><code class="descname">vlans</code><em class="property"> = None</em><a class="headerlink" href="#utils.vlan.vlans" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores unused VLANs in a random order for use with the utility functions.
+Generated the first time a VLAN is requested.
+Originally holds numbers from 1 to 0xFFE since 0 &amp; 0xFFF are reserved VLANs</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../controller.html" class="btn btn-neutral float-right" title="Controller" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="utils.subnet.html" class="btn btn-neutral float-left" title="Subnet" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Keiran Young
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
