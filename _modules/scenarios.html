@@ -93,6 +93,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../api/container.vsftpd.html">Very Secure FTP Daemon</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../containers.html#module-container">Base Container</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../scenarios.html">Scenarios</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../api/scenarios.ArpPoisioning.html">ARP Poisoning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/scenarios.CAMFlooding.html">CAM Flooding</a></li>
@@ -105,6 +106,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../api/scenarios.VlanTrunking.html">VLAN Trunking</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../scenarios.html#module-scenarios">Base Scenario</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../utils.html">Utilities</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../api/utils.account.html">Host Account Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/utils.arp.html">Address Routing Protocol</a></li>
@@ -115,7 +117,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../api/utils.vlan.html">Virtual LAN</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../api/controller.html">controller package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../controller.html">Controller</a></li>
 </ul>
 
             
@@ -207,7 +209,7 @@
 <span class="n">Cleanup</span><span class="o">.</span><span class="n">addCleanupCallback</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">killprocs</span><span class="p">(</span><span class="n">PoxController</span><span class="o">.</span><span class="n">pox_comand</span><span class="p">))</span>
 
 
-<div class="viewcode-block" id="Scenario"><a class="viewcode-back" href="../api/scenarios.html#scenarios.Scenario">[docs]</a><span class="k">class</span> <span class="nc">Scenario</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Scenario"><a class="viewcode-back" href="../scenarios.html#scenarios.Scenario">[docs]</a><span class="k">class</span> <span class="nc">Scenario</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Base scenario class.</span>
 <span class="sd">    Performs the functions to run and document a scenario.</span>
@@ -253,7 +255,7 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">seed</span> <span class="o">=</span> <span class="s2">&quot;random&quot;</span>
 
-<div class="viewcode-block" id="Scenario.run"><a class="viewcode-back" href="../api/scenarios.html#scenarios.Scenario.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Scenario.run"><a class="viewcode-back" href="../scenarios.html#scenarios.Scenario.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Main function that executes the rest of the scenario.&quot;&quot;&quot;</span>
         <span class="c1"># Default to only error log printing for students</span>
         <span class="n">setLogLevel</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">)</span>
@@ -280,7 +282,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
         <span class="k">return</span></div>
 
-<div class="viewcode-block" id="Scenario.create_network"><a class="viewcode-back" href="../api/scenarios.html#scenarios.Scenario.create_network">[docs]</a>    <span class="k">def</span> <span class="nf">create_network</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">controller</span><span class="o">=</span><span class="n">Controller</span><span class="p">):</span>
+<div class="viewcode-block" id="Scenario.create_network"><a class="viewcode-back" href="../scenarios.html#scenarios.Scenario.create_network">[docs]</a>    <span class="k">def</span> <span class="nf">create_network</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">controller</span><span class="o">=</span><span class="n">Controller</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Create Containernet network.&quot;&quot;&quot;</span>
         <span class="n">info</span><span class="p">(</span><span class="s1">&#39;*** Running Cleanup</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
         <span class="n">cleanup</span><span class="p">()</span>
@@ -288,7 +290,7 @@
         <span class="k">if</span> <span class="n">controller</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">add_controller</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Scenario.add_controller"><a class="viewcode-back" href="../api/scenarios.html#scenarios.Scenario.add_controller">[docs]</a>    <span class="k">def</span> <span class="nf">add_controller</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Scenario.add_controller"><a class="viewcode-back" href="../scenarios.html#scenarios.Scenario.add_controller">[docs]</a>    <span class="k">def</span> <span class="nf">add_controller</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Adds a controller to the network.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">addController</span><span class="p">()</span></div>
 
@@ -300,7 +302,7 @@
                 <span class="n">doc</span><span class="o">.</span><span class="n">add_paragraph</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;. &#39;</span> <span class="o">+</span> <span class="n">question</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">add_run</span><span class="p">(</span><span class="n">question</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">bold</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="c1"># Else don&#39;t print it</span>
 
-<div class="viewcode-block" id="Scenario.generate_task"><a class="viewcode-back" href="../api/scenarios.html#scenarios.Scenario.generate_task">[docs]</a>    <span class="k">def</span> <span class="nf">generate_task</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">doc</span><span class="p">):</span>
+<div class="viewcode-block" id="Scenario.generate_task"><a class="viewcode-back" href="../scenarios.html#scenarios.Scenario.generate_task">[docs]</a>    <span class="k">def</span> <span class="nf">generate_task</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">doc</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Adds a header and information on how to connect to the network (if applicable).</span>
 <span class="sd">        Scenarios should extend this to provide users with details on the task.&quot;&quot;&quot;</span>
         <span class="n">doc</span><span class="o">.</span><span class="n">add_heading</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
@@ -308,7 +310,7 @@
         <span class="k">if</span> <span class="n">kali</span><span class="p">:</span>
             <span class="n">kali</span><span class="o">.</span><span class="n">add_hint</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Scenario.generate_questions"><a class="viewcode-back" href="../api/scenarios.html#scenarios.Scenario.generate_questions">[docs]</a>    <span class="k">def</span> <span class="nf">generate_questions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Scenario.generate_questions"><a class="viewcode-back" href="../scenarios.html#scenarios.Scenario.generate_questions">[docs]</a>    <span class="k">def</span> <span class="nf">generate_questions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">pass</span></div>
 
     <span class="k">def</span> <span class="nf">_add_questions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">doc</span><span class="p">):</span>
@@ -321,7 +323,7 @@
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">doc</span><span class="o">.</span><span class="n">add_paragraph</span><span class="p">(</span><span class="n">question</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
-<div class="viewcode-block" id="Scenario.save_documents"><a class="viewcode-back" href="../api/scenarios.html#scenarios.Scenario.save_documents">[docs]</a>    <span class="k">def</span> <span class="nf">save_documents</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">studentDirectory</span><span class="o">=</span><span class="s1">&#39;./student/&#39;</span><span class="p">,</span> <span class="n">teacherDirectory</span><span class="o">=</span><span class="s1">&#39;./teacher/&#39;</span><span class="p">,</span> <span class="n">studentAllowedAnswers</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<div class="viewcode-block" id="Scenario.save_documents"><a class="viewcode-back" href="../scenarios.html#scenarios.Scenario.save_documents">[docs]</a>    <span class="k">def</span> <span class="nf">save_documents</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">studentDirectory</span><span class="o">=</span><span class="s1">&#39;./student/&#39;</span><span class="p">,</span> <span class="n">teacherDirectory</span><span class="o">=</span><span class="s1">&#39;./teacher/&#39;</span><span class="p">,</span> <span class="n">studentAllowedAnswers</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                        <span class="n">staticTaskDocument</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Saves the task and answer documents locally so they can be provided to users.</span>
@@ -362,7 +364,7 @@
         <span class="c1"># if not self.teacher:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">task_document</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">studentDirectory</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;.docx&#39;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Scenario.run_ftp"><a class="viewcode-back" href="../api/scenarios.html#scenarios.Scenario.run_ftp">[docs]</a>    <span class="k">def</span> <span class="nf">run_ftp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">studentDirectory</span><span class="o">=</span><span class="s1">&#39;./student/&#39;</span><span class="p">,</span> <span class="n">teacherDirectory</span><span class="o">=</span><span class="s1">&#39;./teacher&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="Scenario.run_ftp"><a class="viewcode-back" href="../scenarios.html#scenarios.Scenario.run_ftp">[docs]</a>    <span class="k">def</span> <span class="nf">run_ftp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">studentDirectory</span><span class="o">=</span><span class="s1">&#39;./student/&#39;</span><span class="p">,</span> <span class="n">teacherDirectory</span><span class="o">=</span><span class="s1">&#39;./teacher&#39;</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Runs a PyFTPlib FTP server to provide users with access to their task/answer documents.</span>
 
@@ -400,7 +402,7 @@
         <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">CRITICAL</span><span class="p">)</span>
         <span class="n">server</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Scenario.run_network"><a class="viewcode-back" href="../api/scenarios.html#scenarios.Scenario.run_network">[docs]</a>    <span class="k">def</span> <span class="nf">run_network</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Scenario.run_network"><a class="viewcode-back" href="../scenarios.html#scenarios.Scenario.run_network">[docs]</a>    <span class="k">def</span> <span class="nf">run_network</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Starts the Containernet network.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">start</span><span class="p">()</span></div></div>
 </pre></div>

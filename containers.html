@@ -95,6 +95,7 @@
 <li class="toctree-l2"><a class="reference internal" href="api/container.vsftpd.html">Very Secure FTP Daemon</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="#module-container">Base Container</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scenarios.html">Scenarios</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/scenarios.ArpPoisioning.html">ARP Poisoning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/scenarios.CAMFlooding.html">CAM Flooding</a></li>
@@ -107,6 +108,7 @@
 <li class="toctree-l2"><a class="reference internal" href="api/scenarios.VlanTrunking.html">VLAN Trunking</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="scenarios.html#module-scenarios">Base Scenario</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">Utilities</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/utils.account.html">Host Account Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/utils.arp.html">Address Routing Protocol</a></li>
@@ -117,7 +119,7 @@
 <li class="toctree-l2"><a class="reference internal" href="api/utils.vlan.html">Virtual LAN</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="api/controller.html">controller package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html">Controller</a></li>
 </ul>
 
             
@@ -193,6 +195,62 @@
 <li class="toctree-l1"><a class="reference internal" href="api/container.nginx.html">Nginx Web Server</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/container.vsftpd.html">Very Secure FTP Daemon</a></li>
 </ul>
+</div>
+</div>
+<div class="section" id="module-container">
+<span id="base-container"></span><h1>Base Container<a class="headerlink" href="#module-container" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="docker-containers">
+<h2>Docker Containers<a class="headerlink" href="#docker-containers" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="container.Docker">
+<em class="property">class </em><code class="descclassname">container.</code><code class="descname">Docker</code><span class="sig-paren">(</span><em>name</em>, <em>dimage</em>, <em>base='dvni/base'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/container.html#Docker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#container.Docker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">mininet.node.Docker</span></code></p>
+<p>Wrapper to mininet.node.Docker that automates building containers. Should be used as the base class for any other docker containers.</p>
+<dl class="method">
+<dt id="container.Docker.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/container.html#Docker.build"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#container.Docker.build" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build dockerfile from the container/ directory</p>
+<p class="rubric">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="bp">self</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="s2">&quot;kali&quot;</span><span class="p">)</span>
+<span class="go">(&lt;Image: &#39;dvni/kali:latest&#39;&gt;, &lt;itertools.tee object at 0x7f8c1d698098&gt;)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – The directory within container/ containing the Dockerfilr</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The built image.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">(<code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code>)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="container.Docker.document">
+<code class="descname">document</code><span class="sig-paren">(</span><em>doc</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/container.html#Docker.document"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#container.Docker.document" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="container.Docker.added">
+<code class="descname">added</code><em class="property"> = []</em><a class="headerlink" href="#container.Docker.added" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="container.Docker.built">
+<code class="descname">built</code><em class="property"> = []</em><a class="headerlink" href="#container.Docker.built" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="container.Docker.client">
+<code class="descname">client</code><em class="property"> = &lt;docker.client.DockerClient object&gt;</em><a class="headerlink" href="#container.Docker.client" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 
