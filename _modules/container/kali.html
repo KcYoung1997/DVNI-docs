@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>container.kali &mdash; DVNI honours-prerelease documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> DVNI
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">DVNI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/start.html">Start Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../containers.html">Containers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.base.html">Base Continer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.dhcpd.html">ISC DHCP Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.kali.html">Kali Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.nginx.html">Nginx Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.vsftpd.html">Very Secure FTP Daemon</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../scenarios.html">Scenarios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.ArpPoisioning.html">ARP Poisoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.CAMFlooding.html">CAM Flooding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.DHCPIntro.html">DHCP Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.DHCPStarvation.html">DHCP Starvation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.HostScanning.html">Host Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.PacketSniffing.html">Packet Sniffing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.PortScanning.html">Port Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.VlanDoubleTagging.html">VLAN Double Tagging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.VlanTrunking.html">VLAN Trunking</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../utils.html">Utilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.account.html">Host Account Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.arp.html">Address Routing Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.document.html">Documenation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.network.html">Mininet Network Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.stp.html">Spanning Tree Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.subnet.html">Subnet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.vlan.html">Virtual LAN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/controller.html">controller package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">DVNI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../container.html">container</a> &raquo;</li>
+        
+      <li>container.kali</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for container.kali</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Kali Linux</span>
+<span class="sd">==========</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">mininet.log</span> <span class="k">import</span> <span class="n">info</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Any</span>
+
+<span class="kn">from</span> <span class="nn">container</span> <span class="k">import</span> <span class="n">Docker</span>
+<span class="kn">from</span> <span class="nn">utils.document</span> <span class="k">import</span> <span class="n">add_hyperlink</span>
+
+
+
+<span class="c1"># TODO: Discuss and fix issues with network card ordering:</span>
+<span class="c1"># https://unix.stackexchange.com/questions/10254/how-to-change-the-order-of-the-network-cards-eth1-eth0-on-linux</span>
+
+<span class="n">VNC_DEFAULT</span> <span class="o">=</span> <span class="mi">5900</span>
+<span class="n">WEB_DEFAULT</span> <span class="o">=</span> <span class="mi">6080</span>
+
+
+<div class="viewcode-block" id="Kali"><a class="viewcode-back" href="../../api/container.kali.html#container.kali.Kali">[docs]</a><span class="k">class</span> <span class="nc">Kali</span><span class="p">(</span><span class="n">Docker</span><span class="p">):</span>
+    <span class="c1"># Static varible for ports.</span>
+    <span class="c1"># Avoids using these numbers elsewhere in code where it may become confusing.</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="s2">&quot;1920x1080x24&quot;</span><span class="p">,</span> <span class="n">vnc</span><span class="o">=</span><span class="n">VNC_DEFAULT</span><span class="p">,</span> <span class="n">web</span><span class="o">=</span><span class="n">WEB_DEFAULT</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates a Kali host running a VNC server and NoVNC web server</span>
+
+<span class="sd">        :param resolution: (Optional) String in the format WidthxHeightxColorDepth for the remote display.</span>
+<span class="sd">        :type resolution: string</span>
+<span class="sd">        :param vnc: Port to bind VNC to on the host.</span>
+<span class="sd">        :type vnc: int</span>
+<span class="sd">        :param web: Port to bind NoVNC web server to on the host.</span>
+<span class="sd">        :type web: int</span>
+
+<span class="sd">        Attributes:</span>
+<span class="sd">            started: Tracks if the container is started, used to determine when packages should be installed.</span>
+<span class="sd">            packages_to_install: List of packages to install when the container is started.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">started</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># type: bool</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">packages_to_install</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>  <span class="c1"># type: List[str]</span>
+
+        <span class="c1"># Init environment settings if none have been passed</span>
+        <span class="k">if</span> <span class="s1">&#39;environment&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;environment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="c1"># Set resolution in environment settings from parameter if not set</span>
+        <span class="k">if</span> <span class="s1">&#39;RESOLUTION&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;environment&#39;</span><span class="p">]:</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;environment&#39;</span><span class="p">][</span><span class="s1">&#39;RESOLUTION&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">resolution</span>
+        <span class="n">Docker</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                        <span class="n">name</span><span class="p">,</span>
+                        <span class="n">dimage</span><span class="o">=</span><span class="s2">&quot;kali&quot;</span><span class="p">,</span>
+                        <span class="n">dcmd</span><span class="o">=</span><span class="s2">&quot;/init&quot;</span><span class="p">,</span>
+                        <span class="n">ports</span><span class="o">=</span><span class="p">[</span><span class="n">VNC_DEFAULT</span><span class="p">,</span> <span class="n">WEB_DEFAULT</span><span class="p">],</span>
+                        <span class="n">port_bindings</span><span class="o">=</span><span class="p">{</span><span class="n">VNC_DEFAULT</span><span class="p">:</span> <span class="n">vnc</span><span class="p">,</span> <span class="n">WEB_DEFAULT</span><span class="p">:</span> <span class="n">web</span><span class="p">},</span>
+                        <span class="n">publish_all_ports</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                        <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Kali.config"><a class="viewcode-back" href="../../api/container.kali.html#container.kali.Kali.config">[docs]</a>    <span class="k">def</span> <span class="nf">config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Extends Node.config. Installed packages added before the container was started, and marks the container as started.&quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Kali</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="c1"># Install collected packages</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">started</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">install_package</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">packages_to_install</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Kali.install_package"><a class="viewcode-back" href="../../api/container.kali.html#container.kali.Kali.install_package">[docs]</a>    <span class="k">def</span> <span class="nf">install_package</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">packages</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Installs packages inside the container with APT. Stores the packages for if the container is not yet started.</span>
+
+<span class="sd">        :param packages:</span>
+<span class="sd">        :type packages: [string]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># If the host isn&#39;t started, add packages to a list for later</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">started</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">packages_to_install</span> <span class="o">+=</span> <span class="n">packages</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">packages</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">return</span>
+            <span class="n">info</span><span class="p">(</span><span class="s2">&quot;*** Installing Kali packages</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;apt install -y&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="o">*</span><span class="n">packages</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Kali.add_hint"><a class="viewcode-back" href="../../api/container.kali.html#container.kali.Kali.add_hint">[docs]</a>    <span class="k">def</span> <span class="nf">add_hint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">doc</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Appends a hint to the supplied document, telling users how to connect to this machine.</span>
+
+<span class="sd">        :param doc: The word document to add a hint to.</span>
+<span class="sd">        :type doc: Document</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">add_paragraph</span><span class="p">(</span><span class="s1">&#39;Connect to port &#39;</span><span class="p">)</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">add_run</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port_bindings</span><span class="p">[</span><span class="n">VNC_DEFAULT</span><span class="p">]))</span><span class="o">.</span><span class="n">bold</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">add_run</span><span class="p">(</span><span class="s1">&#39; with VNC or view the webpage &#39;</span><span class="p">)</span>
+        <span class="n">add_hyperlink</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="s1">&#39;http://10.10.0.1:</span><span class="si">%d</span><span class="s1">/vnc_auto.html?port=</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">port_bindings</span><span class="p">[</span><span class="n">WEB_DEFAULT</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">port_bindings</span><span class="p">[</span><span class="n">VNC_DEFAULT</span><span class="p">]),</span> <span class="s2">&quot;here&quot;</span><span class="p">)</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">add_run</span><span class="p">(</span><span class="s1">&#39; with a web browser to access to Kali machine for this task.&#39;</span><span class="p">)</span>
+        <span class="n">doc</span><span class="o">.</span><span class="n">add_paragraph</span><span class="p">()</span><span class="o">.</span><span class="n">add_run</span><span class="p">(</span>
+            <span class="s1">&#39;NOTE: Many tools will use the default interface of eth0, the network for tasks is </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">defaultIntf</span><span class="p">())</span><span class="o">.</span><span class="n">bold</span> <span class="o">=</span> <span class="kc">True</span></div></div>
+
+
+<div class="viewcode-block" id="example"><a class="viewcode-back" href="../../api/container.kali.html#container.kali.example">[docs]</a><span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
+    <span class="kn">from</span> <span class="nn">mininet.log</span> <span class="k">import</span> <span class="n">setLogLevel</span>
+    <span class="kn">from</span> <span class="nn">mininet.clean</span> <span class="k">import</span> <span class="n">cleanup</span>
+    <span class="kn">from</span> <span class="nn">mininet.net</span> <span class="k">import</span> <span class="n">Containernet</span>
+    <span class="kn">from</span> <span class="nn">mininet.cli</span> <span class="k">import</span> <span class="n">CLI</span>
+
+    <span class="n">setLogLevel</span><span class="p">(</span><span class="s1">&#39;debug&#39;</span><span class="p">)</span>
+
+    <span class="n">cleanup</span><span class="p">()</span>
+
+    <span class="n">net</span> <span class="o">=</span> <span class="n">Containernet</span><span class="p">(</span><span class="n">controller</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+    <span class="n">kali</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">addDocker</span><span class="p">(</span><span class="s1">&#39;kali&#39;</span><span class="p">,</span>
+                         <span class="bp">cls</span><span class="o">=</span><span class="n">Kali</span><span class="p">,</span>
+                         <span class="n">resolution</span><span class="o">=</span><span class="s2">&quot;1920x1080x24&quot;</span><span class="p">,</span>  <span class="c1"># OPTIONAL</span>
+                         <span class="n">port_vnc</span><span class="o">=</span><span class="mi">5900</span><span class="p">,</span>  <span class="c1"># OPTIONAL</span>
+                         <span class="n">port_web</span><span class="o">=</span><span class="mi">6080</span><span class="p">,</span>  <span class="c1"># OPTIONAL</span>
+                         <span class="n">ip</span><span class="o">=</span><span class="s1">&#39;10.10.10.1/24&#39;</span><span class="p">)</span>
+
+    <span class="n">kali</span><span class="o">.</span><span class="n">install_package</span><span class="p">(</span><span class="s2">&quot;iproute2&quot;</span><span class="p">,</span> <span class="s2">&quot;dnmap&quot;</span><span class="p">)</span>
+
+    <span class="n">h1</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">addHost</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">,</span>
+                     <span class="n">ip</span><span class="o">=</span><span class="s1">&#39;10.10.10.2/24&#39;</span><span class="p">)</span>
+    <span class="n">s1</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">addSwitch</span><span class="p">(</span><span class="s1">&#39;s1&#39;</span><span class="p">)</span>
+
+    <span class="n">net</span><span class="o">.</span><span class="n">addLink</span><span class="p">(</span><span class="n">h1</span><span class="p">,</span> <span class="n">s1</span><span class="p">)</span>
+    <span class="n">net</span><span class="o">.</span><span class="n">addLink</span><span class="p">(</span><span class="n">kali</span><span class="p">,</span> <span class="n">s1</span><span class="p">)</span>
+
+    <span class="n">net</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+    <span class="n">kali</span><span class="o">.</span><span class="n">install_package</span><span class="p">(</span><span class="s2">&quot;nmap&quot;</span><span class="p">)</span>
+
+    <span class="n">CLI</span><span class="p">(</span><span class="n">net</span><span class="p">)</span>
+    <span class="n">net</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">example</span><span class="p">()</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Keiran Young
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

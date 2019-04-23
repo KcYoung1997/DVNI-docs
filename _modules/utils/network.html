@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>utils.network &mdash; DVNI honours-prerelease documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> DVNI
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">DVNI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/start.html">Start Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../containers.html">Containers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.base.html">Base Continer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.dhcpd.html">ISC DHCP Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.kali.html">Kali Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.nginx.html">Nginx Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.vsftpd.html">Very Secure FTP Daemon</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../scenarios.html">Scenarios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.ArpPoisioning.html">ARP Poisoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.CAMFlooding.html">CAM Flooding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.DHCPIntro.html">DHCP Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.DHCPStarvation.html">DHCP Starvation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.HostScanning.html">Host Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.PacketSniffing.html">Packet Sniffing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.PortScanning.html">Port Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.VlanDoubleTagging.html">VLAN Double Tagging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.VlanTrunking.html">VLAN Trunking</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../utils.html">Utilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.account.html">Host Account Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.arp.html">Address Routing Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.document.html">Documenation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.network.html">Mininet Network Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.stp.html">Spanning Tree Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.subnet.html">Subnet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.vlan.html">Virtual LAN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/controller.html">controller package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">DVNI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>utils.network</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for utils.network</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Mininet Network Generation</span>
+<span class="sd">====================================</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">networkx</span>
+<span class="kn">from</span> <span class="nn">mininet.link</span> <span class="k">import</span> <span class="n">Link</span>
+<span class="kn">from</span> <span class="nn">mininet.net</span> <span class="k">import</span> <span class="n">Mininet</span>
+<span class="kn">from</span> <span class="nn">mininet.node</span> <span class="k">import</span> <span class="n">OVSSwitch</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">List</span>
+
+
+<div class="viewcode-block" id="add_switches"><a class="viewcode-back" href="../../api/utils.network.html#utils.network.add_switches">[docs]</a><span class="k">def</span> <span class="nf">add_switches</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">graph_method</span><span class="o">=</span><span class="n">networkx</span><span class="o">.</span><span class="n">path_graph</span><span class="p">,</span> <span class="o">**</span><span class="n">switch_kwargs</span><span class="p">):</span>
+    <span class="c1"># type: (Mininet, int, Callable, **Any) -&gt; Tuple[List[Any], List[Link]]</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generates a network graph and adds switches to it, returning the switches and links between them</span>
+
+<span class="sd">    :param net: A Mininet/Containernet network to add switches to</span>
+<span class="sd">    :param count: The amount of switches to be added</span>
+<span class="sd">    :param graph_method: A networkx graph generator see https://networkx.github.io/documentation/networkx-1.10/reference/generators.html</span>
+<span class="sd">    :param switch_kwargs: Arguments to be passed to &#39;Mininet.addSwitch&#39;</span>
+<span class="sd">    :return: A tuple containing a list of switches added, and a list of links created.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Set default switch parametes if not set</span>
+    <span class="k">if</span> <span class="s1">&#39;cls&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">switch_kwargs</span><span class="p">:</span>
+        <span class="n">switch_kwargs</span><span class="p">[</span><span class="s1">&#39;cls&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">OVSSwitch</span>
+    <span class="k">if</span> <span class="s1">&#39;failMode&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">switch_kwargs</span><span class="p">:</span>
+        <span class="n">switch_kwargs</span><span class="p">[</span><span class="s1">&#39;failMode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;standalone&#39;</span>
+        
+    <span class="c1"># Create a graph of switches</span>
+    <span class="n">graph</span> <span class="o">=</span> <span class="n">graph_method</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>  <span class="c1"># type: networkx.path_graph</span>
+    
+    <span class="c1"># Add a switch for each node in the graph</span>
+    <span class="n">switches</span> <span class="o">=</span> <span class="p">[</span><span class="n">net</span><span class="o">.</span><span class="n">addSwitch</span><span class="p">(</span><span class="s1">&#39;s&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">node</span><span class="p">),</span> <span class="o">**</span><span class="n">switch_kwargs</span><span class="p">)</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">nodes</span><span class="p">]</span>
+    
+    <span class="c1"># Link switches as they are linked by edges in the graph</span>
+    <span class="n">links</span> <span class="o">=</span> <span class="p">[</span><span class="n">net</span><span class="o">.</span><span class="n">addLink</span><span class="p">(</span><span class="n">switches</span><span class="p">[</span><span class="n">edge</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">switches</span><span class="p">[</span><span class="n">edge</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span> <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">edges</span><span class="p">]</span>
+    
+    <span class="k">return</span> <span class="n">switches</span><span class="p">,</span> <span class="n">links</span> </div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Keiran Young
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

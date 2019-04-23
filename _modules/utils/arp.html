@@ -1,0 +1,277 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>utils.arp &mdash; DVNI honours-prerelease documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> DVNI
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">DVNI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/start.html">Start Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../containers.html">Containers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.base.html">Base Continer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.dhcpd.html">ISC DHCP Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.kali.html">Kali Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.nginx.html">Nginx Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.vsftpd.html">Very Secure FTP Daemon</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../scenarios.html">Scenarios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.ArpPoisioning.html">ARP Poisoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.CAMFlooding.html">CAM Flooding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.DHCPIntro.html">DHCP Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.DHCPStarvation.html">DHCP Starvation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.HostScanning.html">Host Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.PacketSniffing.html">Packet Sniffing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.PortScanning.html">Port Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.VlanDoubleTagging.html">VLAN Double Tagging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.VlanTrunking.html">VLAN Trunking</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../utils.html">Utilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.account.html">Host Account Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.arp.html">Address Routing Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.document.html">Documenation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.network.html">Mininet Network Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.stp.html">Spanning Tree Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.subnet.html">Subnet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.vlan.html">Virtual LAN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/controller.html">controller package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">DVNI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>utils.arp</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for utils.arp</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Address Routing Protocol</span>
+<span class="sd">===================================</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">mininet.node</span> <span class="k">import</span> <span class="n">Host</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">List</span>
+
+<span class="c1"># Utility functions intended to help set static ARP routes between hosts.</span>
+
+
+<div class="viewcode-block" id="net_static_arp"><a class="viewcode-back" href="../../api/utils.arp.html#utils.arp.net_static_arp">[docs]</a><span class="k">def</span> <span class="nf">net_static_arp</span><span class="p">(</span><span class="n">hosts</span><span class="p">):</span>
+    <span class="c1"># type: (List[Host]) -&gt; None</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Adds static arp entries from and to every host in the provided list.</span>
+
+<span class="sd">    :param hosts: List of hosts.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Remove all hosts that lack interfaces</span>
+    <span class="n">hosts</span> <span class="o">=</span> <span class="p">[</span><span class="n">h</span> <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">hosts</span> <span class="k">if</span> <span class="n">h</span><span class="o">.</span><span class="n">intfs</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">src</span> <span class="ow">in</span> <span class="n">hosts</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">dest</span> <span class="ow">in</span> <span class="n">hosts</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">src</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">dest</span><span class="p">:</span>
+                <span class="n">_add_entry</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dest</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="static_arp"><a class="viewcode-back" href="../../api/utils.arp.html#utils.arp.static_arp">[docs]</a><span class="k">def</span> <span class="nf">static_arp</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="o">*</span><span class="n">hosts_to</span><span class="p">):</span>
+    <span class="c1"># type: (Host, List[Host]) -&gt; bool</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Add a static arp entry from &quot;host&quot; to every host in &quot;hosts_to&quot;.</span>
+
+<span class="sd">    :return Success of adding entry</span>
+<span class="sd">    :rtype bool</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># If we have no interface it is impossible to add a static arp route</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">host</span><span class="o">.</span><span class="n">intfs</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">for</span> <span class="n">dest</span> <span class="ow">in</span> <span class="n">hosts_to</span><span class="p">:</span>  <span class="c1"># type: Host</span>
+        <span class="c1"># Don&#39;t add ARP entry for the host itself</span>
+        <span class="k">if</span> <span class="n">host</span> <span class="ow">is</span> <span class="n">dest</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="c1"># Destination must have at least one interface/ip</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">dest</span><span class="o">.</span><span class="n">intfs</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">_add_entry</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">dest</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">True</span></div>
+
+
+<span class="k">def</span> <span class="nf">_add_entry</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dest</span><span class="p">):</span>
+    <span class="c1"># type: (Host, Host) -&gt; None</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Internal function, runs a command to add a single arp entry from one host to another.</span>
+<span class="sd">    This function performs no check so is for internal use only.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">src</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;arp -i&quot;</span><span class="p">,</span> <span class="n">src</span><span class="o">.</span><span class="n">defaultIntf</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;-s&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">.</span><span class="n">defaultIntf</span><span class="p">()</span><span class="o">.</span><span class="n">IP</span><span class="p">(),</span> <span class="n">dest</span><span class="o">.</span><span class="n">defaultIntf</span><span class="p">()</span><span class="o">.</span><span class="n">MAC</span><span class="p">())</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Keiran Young
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,349 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>utils.document &mdash; DVNI honours-prerelease documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> DVNI
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">DVNI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/start.html">Start Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../containers.html">Containers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.base.html">Base Continer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.dhcpd.html">ISC DHCP Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.kali.html">Kali Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.nginx.html">Nginx Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/container.vsftpd.html">Very Secure FTP Daemon</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../scenarios.html">Scenarios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.ArpPoisioning.html">ARP Poisoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.CAMFlooding.html">CAM Flooding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.DHCPIntro.html">DHCP Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.DHCPStarvation.html">DHCP Starvation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.HostScanning.html">Host Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.PacketSniffing.html">Packet Sniffing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.PortScanning.html">Port Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.VlanDoubleTagging.html">VLAN Double Tagging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scenarios.VlanTrunking.html">VLAN Trunking</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../utils.html">Utilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.account.html">Host Account Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.arp.html">Address Routing Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.document.html">Documenation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.network.html">Mininet Network Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.stp.html">Spanning Tree Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.subnet.html">Subnet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.vlan.html">Virtual LAN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/controller.html">controller package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">DVNI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>utils.document</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for utils.document</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Documenation</span>
+<span class="sd">======================</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">uuid</span>
+<span class="kn">from</span> <span class="nn">docx</span> <span class="k">import</span> <span class="n">Document</span>
+<span class="kn">from</span> <span class="nn">container</span> <span class="k">import</span> <span class="n">Docker</span>
+<span class="kn">from</span> <span class="nn">utils</span> <span class="k">import</span> <span class="n">subnet</span>
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+
+<div class="viewcode-block" id="docker_hosts"><a class="viewcode-back" href="../../api/utils.document.html#utils.document.docker_hosts">[docs]</a><span class="k">def</span> <span class="nf">docker_hosts</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">doc</span><span class="o">=</span><span class="n">Document</span><span class="p">()):</span>
+    <span class="c1"># If there are Docker instances</span>
+    <span class="c1"># TODO: this could just find net.hosts that are instances of docker</span>
+    <span class="k">if</span> <span class="n">Docker</span><span class="o">.</span><span class="n">added</span><span class="p">:</span>
+        <span class="n">doc</span><span class="o">.</span><span class="n">add_heading</span><span class="p">(</span><span class="s1">&#39;Docker Hosts&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">host</span> <span class="ow">in</span> <span class="n">Docker</span><span class="o">.</span><span class="n">added</span><span class="p">:</span>
+            <span class="n">host</span><span class="o">.</span><span class="n">document</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">doc</span></div>
+
+
+<div class="viewcode-block" id="all_hosts"><a class="viewcode-back" href="../../api/utils.document.html#utils.document.all_hosts">[docs]</a><span class="k">def</span> <span class="nf">all_hosts</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">doc</span><span class="o">=</span><span class="n">Document</span><span class="p">()):</span>
+    <span class="c1"># If there are Hosts</span>
+    <span class="k">if</span> <span class="n">net</span><span class="o">.</span><span class="n">hosts</span><span class="p">:</span>
+        <span class="n">doc</span><span class="o">.</span><span class="n">add_heading</span><span class="p">(</span><span class="s1">&#39;Address list&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">add_paragraph</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">host</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">hosts</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">host</span><span class="o">.</span><span class="n">intfs</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">intf</span> <span class="ow">in</span> <span class="n">host</span><span class="o">.</span><span class="n">intfs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="n">p</span><span class="o">.</span><span class="n">add_run</span><span class="p">((</span><span class="s1">&#39;IP Address:</span><span class="se">\t</span><span class="si">%s</span><span class="s1">/</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">intf</span><span class="o">.</span><span class="n">ip</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">intf</span><span class="o">.</span><span class="n">prefixLen</span><span class="p">)))</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span>
+                    <span class="n">p</span><span class="o">.</span><span class="n">add_run</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">MAC:</span><span class="se">\t</span><span class="si">%s</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">intf</span><span class="o">.</span><span class="n">mac</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">doc</span></div>
+
+
+<div class="viewcode-block" id="subnet_table"><a class="viewcode-back" href="../../api/utils.document.html#utils.document.subnet_table">[docs]</a><span class="k">def</span> <span class="nf">subnet_table</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">doc</span><span class="o">=</span><span class="n">Document</span><span class="p">()):</span>
+    <span class="c1"># If there are generated subnets</span>
+    <span class="k">if</span> <span class="n">subnet</span><span class="o">.</span><span class="n">networks</span><span class="p">:</span>
+        <span class="n">doc</span><span class="o">.</span><span class="n">add_heading</span><span class="p">(</span><span class="s1">&#39;Subnet Table&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">add_table</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;Table Grid&quot;</span><span class="p">)</span>
+        <span class="n">header</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">add_row</span><span class="p">()</span><span class="o">.</span><span class="n">cells</span>
+        <span class="n">header</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Subnet Address&quot;</span>
+        <span class="n">header</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Subnet Mask&quot;</span>
+        <span class="n">header</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Broadcast Address&quot;</span>
+        <span class="k">for</span> <span class="n">network</span> <span class="ow">in</span> <span class="n">subnet</span><span class="o">.</span><span class="n">networks</span><span class="p">:</span>
+            <span class="n">row</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">add_row</span><span class="p">()</span><span class="o">.</span><span class="n">cells</span>
+            <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">network</span><span class="p">)</span>
+            <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">network</span><span class="o">.</span><span class="n">netmask</span><span class="p">)</span>
+            <span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">network</span><span class="o">.</span><span class="n">broadcast_address</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">doc</span></div>
+
+
+<div class="viewcode-block" id="switch_graph"><a class="viewcode-back" href="../../api/utils.document.html#utils.document.switch_graph">[docs]</a><span class="k">def</span> <span class="nf">switch_graph</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">doc</span><span class="o">=</span><span class="n">Document</span><span class="p">()):</span>
+    <span class="k">if</span> <span class="n">net</span><span class="o">.</span><span class="n">switches</span><span class="p">:</span>
+        <span class="n">graph</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+        <span class="c1"># Add all switches to the graph</span>
+        <span class="k">for</span> <span class="n">switch</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">switches</span><span class="p">:</span>
+            <span class="n">graph</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">switch</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="c1"># Get all links between 2 switches</span>
+        <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="p">[</span><span class="n">l</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">links</span> <span class="k">if</span> <span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">intf1</span><span class="o">.</span><span class="n">node</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">switches</span> <span class="ow">and</span> <span class="n">l</span><span class="o">.</span><span class="n">intf2</span><span class="o">.</span><span class="n">node</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">switches</span><span class="p">)]:</span>
+            <span class="n">graph</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">link</span><span class="o">.</span><span class="n">intf1</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">link</span><span class="o">.</span><span class="n">intf2</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">1500</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="s2">&quot;skyblue&quot;</span><span class="p">)</span>
+        <span class="n">pngName</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span> <span class="o">+</span> <span class="s2">&quot;.png&quot;</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">pngName</span><span class="p">)</span>
+        <span class="n">doc</span><span class="o">.</span><span class="n">add_heading</span><span class="p">(</span><span class="s1">&#39;Network Diagram&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">doc</span><span class="o">.</span><span class="n">add_picture</span><span class="p">(</span><span class="n">pngName</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">pngName</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">doc</span></div>
+
+
+<div class="viewcode-block" id="writeAnswers"><a class="viewcode-back" href="../../api/utils.document.html#utils.document.writeAnswers">[docs]</a><span class="k">def</span> <span class="nf">writeAnswers</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">doc</span><span class="o">=</span><span class="n">Document</span><span class="p">()):</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">docker_hosts</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">doc</span><span class="p">)</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">subnet_table</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">doc</span><span class="p">)</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">switch_graph</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">doc</span><span class="p">)</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">all_hosts</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">doc</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">doc</span></div>
+
+
+<div class="viewcode-block" id="add_hyperlink"><a class="viewcode-back" href="../../api/utils.document.html#utils.document.add_hyperlink">[docs]</a><span class="k">def</span> <span class="nf">add_hyperlink</span><span class="p">(</span><span class="n">paragraph</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A function that places a hyperlink within a paragraph object.</span>
+<span class="sd">    Source: https://github.com/python-openxml/python-docx/issues/74#issuecomment-261169410</span>
+
+<span class="sd">    :param paragraph: The paragraph we are adding the hyperlink to.</span>
+<span class="sd">    :param url: A string containing the required url</span>
+<span class="sd">    :param text: The text displayed for the url</span>
+<span class="sd">    :return: The hyperlink object</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">docx</span>
+
+    <span class="c1"># This gets access to the document.xml.rels file and gets a new relation id value</span>
+    <span class="n">part</span> <span class="o">=</span> <span class="n">paragraph</span><span class="o">.</span><span class="n">part</span>
+
+    <span class="n">r_id</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">relate_to</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">docx</span><span class="o">.</span><span class="n">opc</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">RELATIONSHIP_TYPE</span><span class="o">.</span><span class="n">HYPERLINK</span><span class="p">,</span> <span class="n">is_external</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Create the w:hyperlink tag and add needed values</span>
+    <span class="n">hyperlink</span> <span class="o">=</span> <span class="n">docx</span><span class="o">.</span><span class="n">oxml</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">OxmlElement</span><span class="p">(</span><span class="s1">&#39;w:hyperlink&#39;</span><span class="p">)</span>
+    <span class="n">hyperlink</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">docx</span><span class="o">.</span><span class="n">oxml</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">qn</span><span class="p">(</span><span class="s1">&#39;r:id&#39;</span><span class="p">),</span> <span class="n">r_id</span><span class="p">,</span> <span class="p">)</span>
+
+    <span class="c1"># Create a w:r element</span>
+    <span class="n">new_run</span> <span class="o">=</span> <span class="n">docx</span><span class="o">.</span><span class="n">oxml</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">OxmlElement</span><span class="p">(</span><span class="s1">&#39;w:r&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Create a new w:rPr element</span>
+    <span class="n">rPr</span> <span class="o">=</span> <span class="n">docx</span><span class="o">.</span><span class="n">oxml</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">OxmlElement</span><span class="p">(</span><span class="s1">&#39;w:rPr&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Add color</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">docx</span><span class="o">.</span><span class="n">oxml</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">OxmlElement</span><span class="p">(</span><span class="s1">&#39;w:color&#39;</span><span class="p">)</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">docx</span><span class="o">.</span><span class="n">oxml</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">qn</span><span class="p">(</span><span class="s1">&#39;w:val&#39;</span><span class="p">),</span> <span class="s2">&quot;0000EE&quot;</span><span class="p">)</span>
+    <span class="n">rPr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+
+    <span class="c1"># Add underline</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">docx</span><span class="o">.</span><span class="n">oxml</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">OxmlElement</span><span class="p">(</span><span class="s1">&#39;w:u&#39;</span><span class="p">)</span>
+    <span class="n">u</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">docx</span><span class="o">.</span><span class="n">oxml</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">qn</span><span class="p">(</span><span class="s1">&#39;w:val&#39;</span><span class="p">),</span> <span class="s1">&#39;single&#39;</span><span class="p">)</span>
+    <span class="n">rPr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+
+    <span class="c1"># Join all the xml elements together add add the required text to the w:r element</span>
+    <span class="n">new_run</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rPr</span><span class="p">)</span>
+    <span class="n">new_run</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">text</span>
+    <span class="n">hyperlink</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_run</span><span class="p">)</span>
+
+    <span class="n">paragraph</span><span class="o">.</span><span class="n">_p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hyperlink</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">hyperlink</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Keiran Young
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
